@@ -43,6 +43,8 @@ main {
 }
 
 picture {
+    display: flex;
+    flex-direction: column;
     width: 50%;
 }
 
@@ -124,8 +126,9 @@ h1 {
     height: 20px;
 }
 
-img {
+.imagem > img {
     width: 100%;
+    border-radius: 0px;
 }
 
 .button > p {
@@ -139,4 +142,34 @@ img {
 .button:hover {
     cursor: pointer;
     background-color: var(--cor3);
+}
+
+@media  (max-width: 670px) {
+    .card {
+        flex-direction: column;
+        width: 325px;
+    }
+
+    picture {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .imagem-mobile > img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+    
 }
